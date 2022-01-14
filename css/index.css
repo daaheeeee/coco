@@ -1,0 +1,286 @@
+@charset "UTF-8";
+.article1 { position:relative; 
+    /* overflow:hidden  */
+}
+/* .article1 .arrbtn {
+    position:absolute; top:50%; transform:translateY(-50%);
+    font-size:50px; color:#fff; cursor:pointer } */
+/* .article1 .arrbtn.prev { left:30px; z-index:9999; }
+.article1 .arrbtn.next { right:30px; }
+.article1 .slickdots { position:absolute; bottom:30px; left:50%;
+    transform:translate(-50%) }
+.article1 .slickdots li { display:inline-block }
+.article1 .slickdots li button { width:30px; height:30px; 
+    border:none; background:#fff; color:#fff; 
+    cursor:pointer
+}
+.article1 .slickdots li.active button {  
+    background:#999; color:#999; 
+} */
+
+.article1 .slick-arrow {
+    position:absolute; top:50%; transform:translateY(-50%);
+    font-size:80px; color:#fff; cursor:pointer; background: none; border:none; }
+.article1 .slick-arrow.slick-prev { left:30px; z-index:9999; }
+.article1 .slick-arrow.slick-next { right:30px; }
+
+.article1 .slick-dots { position:absolute; bottom:30px; width:100%; text-align: center;
+    /* 
+    width:100%; text-align: center; 이 대신
+    left:50%; transform:translate(-50%) 원래 이거였는데 이렇게 하면 화면사이즈가 작아질 때 넓이를 줄여도 주변 공간이 많아도 무너짐
+    */
+}
+.article1 .slick-dots li { display:inline-block; margin:0 5px; 
+    width:108px; height:2px; background:#999; position:relative;}
+
+.article1 .slick-dots li button { width:0px; height:2px; 
+    border:none; background:#fff; color:#fff; overflow:hidden;
+    cursor:pointer; position:absolute; top:0; left:0;
+    transition: all 0s;
+}
+.article1 .slick-dots li.slick-active button {  
+    width:108px; transition: all 3s;
+    /*background:#999; color:#999;*/ 
+} 
+.article1 .plpa {
+    font-size:20px; color:#fff;
+    cursor:pointer;
+    position:absolute; bottom:22px;
+    left:50%; 
+    transform:translate(190px);
+}
+/* .article1 .slide-group { width:300%; position:relative; left:0; }
+.article1 .slide-group::after { content:''; display:block; clear:both }
+.article1 .slide-group .slide { float:left; width:33.33%; } */
+
+.article1 .slide { height:650px; background-size:cover; position:relative; }
+.article1 .slide1 { 
+    background:url(../img/main_img1.jpg) no-repeat center;
+    background-size:cover; position:relative; }
+.article1 .slide2 {
+    background:url(../img/main_img2.jpg) no-repeat center;
+    background-size:cover;  position:relative; }
+.article1 .slide3 {
+    background:url(../img/main_img3.jpg) no-repeat center;
+    background-size:cover;  position:relative; }
+
+.article1 .slick-slide .slide_text { position:absolute; top:35%; 
+    transform:translateY(-50%); color:#fff; text-align:center; width:100%;}
+    /* opacity:0; transition: all 0.8s 0.6s; 0.6초 대기한 후 0.5초의 시간동안 translate작동 */
+    /* 
+    left:50%; transform:translate(-50%, 50%); 대신 width:100%  transform:translateY(-50%); 하면 작은화면에서 글자가 자연스럽게 줄바꿈 됨  
+    */
+
+#section .article1 .slick-slide .slide_text h2 { font-size: 42px;line-height: 50px;
+    font-weight: 800; transform:translateY(-100%); opacity:0; transition: all 0.5s 0.6s; }
+/* rwd에서 폰트 사이즈 안커져서 !important 썼던거 해결 방법 : id 가 class보다 우선순위가 높기 때문에 밑에 #section h2에 줬던 폰트사이즈 때문이니 durldp #id 주기
+*/
+.article1 .slick-slide .slide_text p {font-size: 16px;line-height: 24px;
+    font-weight: 400; margin:30px 0; transform:translateY(100%); opacity:0; transition: all 0.5s 0.6s; }
+
+#section .article1 .slick-slide.slick-active.slick-current .slide_text h2 { font-size: 42px;line-height: 50px;
+    font-weight: 800; transform:translateY(0%); opacity:1; } 
+    /* 우선순위는 클래스명이 많이 붙은 애들이 높아서 얘가 더 높음 rwd가서 font-size바꿔도 안바뀜 */
+    
+.article1 .slick-slide.slick-active.slick-current .slide_text p {font-size: 16px;line-height: 24px;
+    font-weight: 400; margin:30px 0; transform:translateY(0%); opacity:1; }
+
+.article1 .slick-slide .slide_text a { display: inline-block; padding: 10px 35px;
+    border: 1px solid #FFF; font-size: 15px; font-weight: 400;}
+/* a버튼에 호버하면 배경색 background: rgba(255,255,255,0.3); */
+.article1 .slick-slide .slide_text a:hover {background: rgba(255,255,255,0.3);}
+
+
+
+
+#section h2 { color: #000; font-size: 36px; line-height: 42px; font-weight: 700;
+    padding:80px 0 10px; text-align:center; }
+.article2 { overflow:hidden}  /*translate로 li들을 -100% 해서 밖으로 빼버렸기 때문에 필요  */
+.article2 > p, .article4 > p  { padding-bottom: 40px; text-align:center; }
+.article2 li { height:520px; float:left; width:24%; margin-right:1.3333%; color:#fff;
+    position:relative; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    transition:all 1s;
+    opacity:0;
+}
+.article2 li::before { content:'';
+    position:absolute; top:0; bottom:0; right:0; left:0;
+    background:rgba(0,0,0,0.5); opacity:0; transition:all 0.4s
+}   
+.article2 li:hover::before {  opacity:1; }   
+
+.article2 li:nth-child(1) { background-image:url(../img/what1.jpg); transform:translate(-100%, 0) }
+.article2 li:nth-child(2) { background-image:url(../img/what2.jpg); transform:translate(-100%, 0) }
+.article2 li:nth-child(3) { background-image:url(../img/what3.jpg); transform:translate(100%, 0) }
+.article2 li:nth-child(4) { background-image:url(../img/what4.jpg); margin-right:0; transform:translate(100%, 0) }
+
+.article2.on li:nth-child(1) { transform:translate(0, 0); opacity:1; }
+.article2.on li:nth-child(2) { transform:translate(0, 0); opacity:1; }
+.article2.on li:nth-child(3) { transform:translate(0, 0); opacity:1; }
+.article2.on li:nth-child(4) { transform:translate(0, 0); opacity:1; }
+
+
+.article2 li > div { position:absolute; bottom:25px; left:25px; 
+    right:25px; transition:all 0.4s }
+.article2 li:hover > div { bottom:100px;  }
+
+.article2 li > div > h3 { font-size: 24px; line-height: 32px; font-weight: 500; }
+.article2 li > div > p { padding: 20px 0; line-height:1.5; font-size:14px; }
+.article2 li > div > a {  display: inline-block; padding: 10px 40px;
+    border: 1px solid rgba(255,255,255,0.5); font-size: 11px; font-weight: 600 !important;
+}
+.article2 li > div > a:hover {background: rgba(255,255,255,0.3);}
+
+.article3 { padding:100px 0;
+    background:url(../img/intro_bg.jpg) no-repeat center top;
+    background-size:cover;
+    background-attachment: fixed; /* 패럴렉스 이미지 : 스크롤시 배경이미지 고정스타일 */
+    margin-top:100px; 
+    color:#fff;
+    text-align:center;
+}
+
+.article3 h2 { color:#fff !important; 
+    word-break: keep-all;
+    padding-top:0px !important; /*글자 중간에 오게 하려면 위에 h2의 padding:80px 0으로 변경*/
+}
+.article3 p { padding: 15px 0 25px;}
+.article3 a { font-size:13px; padding:10px 30px; display:inline-block;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.article3 a:hover {background: rgba(255,255,255,0.3);}
+
+.article4 li {
+    float:left; width:32%;
+    margin-right:2%;
+    margin-bottom:20px; 
+    border:1px solid #999;
+    text-align:center;
+    transform:scale(0.5);
+    opacity:0;
+}
+.article4 li:nth-child(1) { transition:all 1s; }
+.article4 li:nth-child(2) { transition:all 1.5s; }
+.article4 li:nth-child(3) { transition:all 2s; }
+.article4 li:nth-child(4) { transition:all 2.5s; }
+.article4 li:nth-child(5) { transition:all 3s; }
+.article4 li:nth-child(6) { transition:all 3.5s; }
+
+.article4.on li { transform: scale(1); opacity:1;}
+.article4 li:nth-child(3n) { margin-right:0 }
+
+/* margin값이 상하로 만나면 둘 중에 큰 값 하나만 적용 */
+.article4 li h4 { font-size:17px; margin:25px; font-weight:bold }
+.article4 li p { font-size:14px; margin:25px; line-height:1.5 }
+.article4 li > div { overflow:hidden; position:relative; }
+.article4 li > div::before {
+    content:''; position:absolute; top:0; left:0; 
+    bottom:0; right:0; background:rgba(0,0,0,0.5);
+    opacity:0; transition:all 0.4s; }
+.article4 li > div.on::before { opacity:1; z-index:9 }
+.article4 li .zoom { position:absolute; 
+    top:50%; transform:translateY(-50%);
+    left:0; right:0; 
+    color:#fff; font-size:30px; 
+    opacity:0; transition:all 0.4s; }
+.article4 li > div.on .zoom { opacity:1; z-index:1000 }
+
+.article4 li img {  transition:all 0.5s; }
+/* 호버시 ::before나 ::after 박스가 중간에 생기면 
+마우스가 이미지를 가리킬 수 없으므로, 부모한테 호버했을때
+이미지 스케일이 커지도록 함 */
+.article4 li > div.on > img { transform:scale(1.2) }
+
+
+/* article5 구역 */
+.article5 { padding:30px 0; margin-top:50px; border-top:1px solid #ddd }
+.article5 .row { overflow:hidden }
+.article5 .row > div { width:33.33%; float:left; }
+.article5 .row > div.cs_board { padding-right:30px; }
+.cs_board .tabmenu { overflow:hidden; border-bottom:1px solid #ddd }
+.cs_board .tabmenu li { float:left; 
+    border:1px solid #ddd; border-bottom:none;
+    padding:10px 20px; cursor:pointer;
+}
+.cs_board .tabmenu li.active {
+    background:#ddd; color:orangered;
+}
+.cs_board .contents > div { display:none }
+.cs_board .contents > div.active { display:block }
+.cs_board .contents table { font-size:14px;  }
+.cs_board .contents col:nth-child(1) { width:auto }
+.cs_board .contents col:nth-child(2) { width:100px }
+.cs_board .contents td { border-bottom:1px solid #ddd;
+    padding:9px 5px; }
+.cs_board .contents td:nth-child(1) {
+    white-space:nowrap; overflow:hidden;
+    text-overflow: ellipsis; }
+.cs_board .contents td:nth-child(2) {  text-align:right } 
+.cs_board .contents { position:relative }
+.cs_board .contents .more {
+    position:absolute; bottom:100%; right:0; 
+    padding:5px; background:#ddd; margin-bottom:5px;
+    border-radius:3px; 
+}
+
+
+.article5 .row > div.cs_center { border-left:1px solid #ddd;
+    border-right:1px solid #ddd; padding:0 30px; }
+.article5 .row > div.cs_center h4 {color:#000; font-size:20px; line-height:28px; padding-bottom:15px; font-weight:500;}
+.article5 .cs_center li {font-size:13px; line-height:20px; padding-left:10px; margin:2px 0; text-indent:0px; position:relative; }
+.article5 .cs_center li::before {content:""; width:3px; height:3px; background:#666; border-radius:50%; position:absolute; left:0; top:50%; transform:translateY(-50%)}
+.article5 .cs_center li a {text-indent:0px;}
+.article5 .cs_center li.tel_num {color:#ed5c20; font-size:30px; line-height:36px; font-weight:700; font-family:'Montserrat',sans-serif; padding-bottom:10px; padding-left:0px }
+.article5 .cs_center li.cs-btn::before, 
+.article5 .cs_center li.tel_num::before {display:none;}
+.article5 .cs_center li.cs-btn {padding-top:20px !important; padding:0; text-indent:0; margin:0; font-size:0; text-align:center;}
+.article5 .cs_center li.cs-btn a {
+    display: inline-block; width: 46%; margin: 1%;
+    border-radius: 3px; padding: 10px; font-size: 14px;
+    text-align: center; color: #FFF; }
+.article5 .cs_center li.cs-btn a.cs-btn {
+    background: #787878; }
+.article5 .cs_center li.cs-btn a.cs-btn2 {
+    background: #001f60; }
+.article5 .cs_center li.tel_num i {
+    transform:rotateY(180deg) scale(0.7); }
+
+
+.article5 .row div.cs_movie { padding-left:30px; }
+
+/* 유튜브 동영상 스타일 공식 */
+/* .article5 .cs_movie .tubewrap { 
+    /*height는 %를 쓸 수 없으니 padding-top:56.25% 사용
+    width:100%; padding-top:56.25%; 
+    position:relative; 
+}
+.article5 .cs_movie .tubewrap iframe {
+    position:absolute; top:0; left:0;
+} */
+
+
+
+/*평상시에는 보이지 않는 설명문구*/
+.outbox { 
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    z-index:999999;
+    display:none; 
+}
+.outbox .inbox {
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    border:10px solid #fff; 
+}
+.outbox .inbox button {
+    position:absolute;
+    top:0; right:0;
+    padding:20px; 
+}

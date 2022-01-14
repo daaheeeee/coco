@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* 반응형 스타일 css */
+
+@media screen and (max-width:1024px) {
+
+    #header #nav { 
+        position:fixed; top:0px; transform:translateY(0%); /* top값은 26.888px +96px, 원래는 123px이었는데 네비게이션 보이는 방법을 변경함,,, */
+        left:100%; right:0px; font-size:18px; color:#1e1e1e; 
+        background:rgba(0,0,0,0.5);  bottom:0px; overflow-y:auto; overflow-x:hidden; } 
+        /*높이 세울 때 height:100% 하면 overflow가 안먹히니까  position:fixed 하고 top:123px부터 bottom:0px*/
+        /* transition은 화면 사이즈가 달리지면서 스타일이 달라지면 teransition이 눈에 보이기때문에 opacity 쓰기, js에서 animate 사용*/
+    /* #header.on #nav { } */
+    #header #nav .depth1{ width: 200px; background: #fff; height:100%;
+        position:absolute; top:0; bottom:0; right:-200px;}
+    #header #nav .depth1 > li { float:none; position:relative; }
+    #header #nav .depth1 > li > a { padding:20px 40px; display:block; text-align: center;}
+    #header #nav .depth1 > li:hover > a { color: #00529b; }
+    #header .depth2 { position:static; top:100%; left:0; 
+        background:#555; font-size:14px;
+        color:#fff; width:100%; text-align:center; 
+        display:none; 
+    } /*position:static; = absolute 취소 */
+
+    /* 햄버거 */
+    #header .opennav{ display:block; position:absolute; top:50%; 
+        transform:translateY(-50%); right:20px; font-size:30px; transition: all 0.3s;  }
+
+    #header .opennav.on { /*원래는 absolute였지만 새로운 구역에서 보이게 하려면 fixed*/
+        position:fixed; top:20px; transform:translateY(0%); right:20px; z-index:99999999;}
+
+    /* 검색창 */
+    #header .search { /*원래는 absolute였지만 새로운 구역에서 보이게 하려면 fixed*/
+        position:fixed; 
+        right:70px;
+        top:60px; 
+        transform:translateY(0%);
+        font-size: 28px;
+        z-index:99; /*돋보기가 f12키 했을 때 홀로 커서가 안잡히면 z-index주기*/
+    }
+    #header .search #sbox { /*width:169px에서 0으로 변경하고 overflow:hidden하면 js에서 검색창이 0에서 169px로 늘어나는 애니메이션 작동하도록 */
+        border:0px solid #000; text-indent:1em; width:0;  height:30px;
+        overflow:hidden; outline:none; /*밖에 검정 border 생기는거 싫어*/
+        transition:all 0.5s;
+        position:absolute;
+        top:0px; right:40px;
+    }
+    #header .search.on #sbox {
+        width:300px;
+        border:1px solid #000;
+    }
+
+    /* 슬라이드구역 반응형 스타일,선 길이 줄이기 */
+
+    .article1 .slick-dots li { display:inline-block; margin:0 5px; 
+        width:80px; height:2px; background:#999; position:relative;
+    } /*넓이 줄이기*/
+    .article1 .slick-dots li.slick-active button {  
+        width:80px; transition: all 3s;
+        
+    } 
+    .article1 .plpa {
+        font-size:20px; color:#fff;
+        cursor:pointer;
+        position:absolute; bottom:22px;
+        left:50%; 
+        transform:translate(140px);
+    }
+
+    .article5 .row > div { width:100%; float:left; } /*33.33을 100%로 변경하면 한줄에 하나씩 가능*/
+    
+    .article5 .row > div.cs_board { padding-right:0px; } /* 한줄에 하나씩 정렬되니까 굳이 padding 필요없음*/
+
+    .article5 .row > div.cs_center { 
+    border:1px solid #ddd; padding:30px; margin:30px 0; text-align: center; }
+
+    .article5 .cs_center li::before {display:none;} /*점 안보이게*/
+
+    .article5 .row div.cs_movie { padding-left:0; text-align: center; }
+
+    .youtubeVideoInner{ top:25% !important;}
+
+    #footer .info span { padding:5px 20px; display:block;}
+}
+
+
+@media screen and (max-width:768px) {
+    #header .search #sbox {
+        top:63px; right:0px; height:50px;
+    }
+
+    #section .article1 .slick-slide .slide_text h2 { 
+        font-size: 25px !important;
+        line-height: 25px;
+        font-weight: 800; transform:unset; opacity:unset; transition: unset;
+    } 
+    .article1 .slick-slide .slide_text p { display:none; }
+
+    .article1 .slide { height:350px; background-size:cover; position:relative; }
+
+    .article2 li:hover > div { bottom:25px;  } /*작은화면에서는 li hover해도 안올라가게*/
+
+    .article2 li { height:220px; float:left; width:49%; /*한줄에 2개 49*2= 98이니까 right는 2%주고 짝수번수 li 이미지들한테 margin-right:0; 주기 안주면 무너짐 */
+        margin-right:2%; color:#fff;
+        position:relative; 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        transition:all 1s;
+        opacity:1; /*0에서 1로 변경*/
+        margin-bottom:20px;
+    }
+    .article2 li:nth-child(1) { background-image:url(../img/what1.jpg); transform:translate(0%, 0) }
+    .article2 li:nth-child(2) { background-image:url(../img/what2.jpg); margin-right:0; transform:translate(0%, 0) }
+    .article2 li:nth-child(3) { background-image:url(../img/what3.jpg); transform:translate(0%, 0) }
+    .article2 li:nth-child(4) { background-image:url(../img/what4.jpg); margin-right:0; transform:translate(0%, 0)}
+
+    .article2 li > div { text-align: center;}
+
+    .article2 li > div > p { display:none; }
+
+    .article2 li > div > a {  display: inline-block; padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.5); font-size: 11px; 
+    font-weight: 600 !important; margin-top: 20px;
+    } /*버튼 태그*/
+
+
+    #section h2 { font-size: 25px;  padding:30px 0 10px;}
+
+    .article3 { margin-top:30px; padding:50px 0; }
+
+    .article4 li {
+        float:left; width:49%; /* 화면에 2개만 보이게 */
+        margin-right:0%; /* index.css에서 margin-right:2%가 상속 안되게 0으로 죽임*/
+        margin-bottom:20px; 
+        border:1px solid #999;
+        text-align:center;
+        transform:scale(1); opacity:1; /* 애니메이션 안되게*/
+    }
+    /* margin:0 1% 대신 margin-right:0% 하는 이유가 박스에 좌우측에 여백을 줬기 때문에 오른쪽 박스 여백이 안먹게됨*/
+
+    .article4 li:nth-child(3n) { margin-right:0 } /*index랑 중복되는거니까 굳이 안써도 ㄱㅊ*/
+    .article4 li:nth-child(2n+1) { margin-right:2% } /*한줄에 2개씩 보일 때 각 줄의 첫번째 애들만 2n+1 = odd홀수도 가능*/
+
+    .article4 li p { display:none; }
+
+    
+
+}

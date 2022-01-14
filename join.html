@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/rwdcommon.css">
+    <link rel="stylesheet" href="./css/join.css">
+    <title>디자인코코</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+
+    <div id="wrap">
+        <header id="header">
+            <div class="top_menu">
+                <div class="row">
+                    <div class="search">
+                        <span class="blind">검색어를 입력하세요</span>
+                        <input type="text" id="sbox" placeholder="검색어 입력">
+                        <label for="sbox"><i class="fas fa-search"></i></label>
+                    </div>
+                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    <a href="#none"><i class="fas fa-lock"></i> 로그인</a>
+                    <a href="join.html"><i class="fas fa-sign-in-alt"></i> 회원가입</a>
+                </div><!--a태그들은 원래 한줄정렬-->
+            </div>
+            <div class="row">
+                <h1><a href="index.html"><img src="img/logo.png" alt="디자인코코"></a></h1>
+               
+                <div class="opennav">
+                    <span class="blind">네비게이션 열고닫기</span>
+                    <i class="fas fa-bars"></i> <!-- 닫기 아이콘은 bars 대신 times-->
+                </div>
+
+
+                <nav id="nav">
+                    <ul class="depth1 cf">
+                        <li>
+                            <a href="company.html">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="company.html">회사소개</a></li>
+                                <li><a href="#none">CEO 인사말</a></li>
+                                <li><a href="#none">회사연혁</a></li>
+                                <li><a href="#none">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">사업소개</a>
+                            <ul class="depth2">
+                                <li><a href="#none">사업분야</a></li>
+                                <li><a href="#none">사업분야2</a></li>
+                                <li><a href="#none">인증서</a></li>
+                                <li><a href="#none">파트너</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">제품소개</a>
+                            <ul class="depth2">
+                                <li><a href="#none">제품 01</a></li>
+                                <li><a href="#none">제품 02</a></li>
+                                <li><a href="#none">제품 03</a></li>
+                                <li><a href="#none">제품 04</a></li>
+                                <li><a href="#none">제품 05</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">고객센터</a>
+                            <ul class="depth2">
+                                <li><a href="#none">고객상담</a></li>
+                                <li><a href="#none">문의게시판</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">커뮤니티</a>
+                            <ul class="depth2">
+                                <li><a href="#none">FAQ</a></li>
+                                <li><a href="#none">이벤트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <section id="section" class="joinPage">
+            <div class="joinBox row">
+                <h2>회원가입</h2>
+                <form action="#none" method="post">
+                    <fieldset>
+                        <legend>기본정보</legend>
+                        <h3>기본정보</h3>
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><label for="idbox">아이디</label></th> <!--왼쪽(회색배경)-->
+                                    <td>
+                                        <input type="text" id="idbox" name="idbox"> <!--오른쪽 input상자-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwbox">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" id="pwbox" name="pwbox"><!--비밀번호는 보이면 안되니까 input type text대신 password-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwboxok">비밀번호확인</label></th>
+                                    <td>
+                                        <input type="password" id="pwboxok">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="irum">이름</label></th>
+                                    <td>
+                                        <input type="text" id="irum" name="irum">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3"><label for="sample4_postcode">주소</label></th>
+                                    <td>
+                                        <input type="text" id="zipcode" name="zipcode">
+                                        <button type="button">우편번호</button><!--checkbox는 value값이 저장되고 여러개 중 하나만 전달되기 때문에 name이 달라야 함-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="sample4_roadAddress" name="addr1"> 도로명주소
+                                        <input type="text" id="sample4_jibunAddress" name="addr2"> 지번주소
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="sample4_extraAddress" name="addr3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="hp">휴대전화</label></th>
+                                    <td>
+                                        <select name="hp" id="hp">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                        </select>
+                                        -
+                                        <input type="text" id="hp1" name="hp1">
+                                        -
+                                        <input type="text" id="hp2" name="hp2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>SMS수신여부</th>
+                                    <td>
+                                        <p>
+                                            <input type="checkbox" value="ok" id="sms" name="sms"> <label for="sms">동의함</label>
+                                        </p>
+                                        <p>
+                                            쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="emailid">이메일</label></th>
+                                    <td>
+                                        <input type="text" id="emailid" name="emailid"> @ 
+                                        <input type="text" id="emaildomain" name="emaildomain" disabled>
+                                        <select id="domainlist">
+                                            <option value="noselect">-이메일선택-</option>
+                                            <option value="naver.com">네이버</option>
+                                            <option value="daum.net">다음</option>
+                                            <option value="self">직접입력</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일수신여부</th>
+                                    <td>
+                                        <p> <!--checkbox는 value값이 저장되고 여러개 중 하나만 전달되기 때문에 name이 달라야 함-->
+                                            <input type="checkbox" value="ok" id="emailok" name="emailok"> <label for="emailok">동의함</label>
+                                        </p>
+                                        <p>
+                                            쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>추가정보</legend>
+                        <h3>추가정보</h3>
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>성별</th><!--radio박스는 둘 중 하나만 전송되기 때문에 name이 같아야 함, value값이 전달-->
+                                    <td>
+                                        <input type="radio" id="male" name="gender" value="m"> <label for="male">남자</label>
+                                        <input type="radio" id="female" name="gender" value="w"> <label for="female">여자</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="birth">생년월일</label></th>
+                                    <td>
+                                        <input type="text" id="birth" name="birth">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="local">지역</label></th>
+                                    <td>
+                                        <select name="local" id="local">
+                                            <option>선택</option>
+                                            <option value="서울">서울</option>
+                                            <option value="경기도">경기도</option>
+                                            <option value="경상남도">경상남도</option>
+                                            <option value="전라남도">전라남도</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>관심분야</label></th>
+                                    <td><!--checkbox는 value값이 저장되고 여러개 중 하나만 전달되기 때문에 name이 달라야 함-->
+                                        <input type="checkbox" id="all"> <label for="all">전체선택</label>
+                                        <input type="checkbox" name="co1" id="co1" value="포토샵"> <label for="co1">포토샵</label>
+                                        <input type="checkbox" name="co2" id="co2" value="일러스트"> <label for="co2">일러스트</label>
+                                        <input type="checkbox" name="co3" id="co3" value="HTML"> <label for="co3">HTML</label>
+                                        <input type="checkbox" name="co4" id="co4" value="CSS"> <label for="co4">CSS</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="memo">메모</label></th>
+                                    <td><!--maxlength = 글자수 제한-->
+                                        <textarea name="memo" id="memo" maxlength="10" placeholder="메모를 10자 이내로 작성해주세요!!"></textarea>
+                                        남은글자 : <span class="remain">10</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>이용약관개인정보수집동의</legend>
+                        <h3>이용약관 동의</h3>
+                        <div class="agree">
+                            <div class="guide">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita provident sint iure, fugit est aspernatur harum ipsum tenetur minus tempore, magni eveniet quibusdam magnam repellendus ea architecto culpa earum!
+                                Rerum, quam, quos cumque natus accusantium possimus corrupti eligendi nisi dignissimos error ad iure at numquam pariatur ducimus animi! Tempore id, culpa quia amet autem vero dignissimos suscipit praesentium consequatur.
+                                Similique quae velit voluptatum excepturi corrupti nihil ea cum iure. At, alias minus? Temporibus repellendus, iure quis ullam provident exercitationem ipsam mollitia unde aliquam. Magni fugit recusandae quidem sit laboriosam!
+                                Sed aut distinctio repellat ab. Obcaecati, iure! Facere minima autem dolorum consectetur sapiente aspernatur beatae. Dolorem eligendi provident at vero laboriosam earum animi, nihil explicabo ullam nobis, sed omnis iure?
+                                Veniam magnam, quibusdam libero maiores laboriosam tenetur beatae tempora deserunt. Nesciunt exercitationem dolore, necessitatibus eligendi adipisci libero vitae quis nostrum accusantium officiis laboriosam? Debitis explicabo eligendi ut ratione eveniet quasi.
+                                Optio, reprehenderit illo? Delectus doloribus iusto vero impedit ratione, expedita quos consequatur ad praesentium ea? Amet, accusamus fugiat officiis culpa deserunt error excepturi cum atque, natus aliquam rerum doloremque distinctio.
+                                Quam vel quis modi magni, harum officiis autem. Voluptatum natus maxime reprehenderit? Unde accusantium suscipit, recusandae veritatis beatae at. Perferendis architecto tempora cupiditate libero ut est iure molestiae quisquam eius?
+                                Excepturi suscipit, esse facilis ut a doloremque fugit laborum accusamus nostrum quo, autem consequatur minima? Pariatur rerum cum vitae quod autem sint dolores earum, praesentium, blanditiis non consequuntur quia quam.
+                                Beatae quis error quidem modi impedit reprehenderit qui placeat animi rem dicta nobis excepturi sed, aperiam ipsa omnis voluptatum quasi, earum accusamus esse alias quo. Repudiandae repellendus magnam sit obcaecati!
+                                Enim fuga earum iusto aliquid qui, eveniet fugit non debitis dolores aut minus, minima laboriosam eos ipsam vitae corporis blanditiis ducimus sequi exercitationem officiis excepturi reiciendis alias. Repellendus, laborum dolor?
+                            </div>
+                            <p><span>이용약관에 동의하십니까?</span> <input type="checkbox" value="ok" name="guide" id="guide"> <label for="guide">동의함</label></p>
+                        </div>
+                        <h3>개인정보수집 및 이용동의</h3>
+                        <div class="agree">
+                            <div class="privacy">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur porro, hic suscipit pariatur at debitis, temporibus sapiente beatae soluta numquam quidem. Quod, suscipit molestias sed eius quas nesciunt soluta neque?
+                                Voluptates facere dolores itaque mollitia fuga commodi in cupiditate quod unde beatae distinctio, odio iure dolorum magnam asperiores est. Adipisci nostrum temporibus nisi iste excepturi animi iure rem laudantium provident?
+                                Temporibus quia iure cumque veritatis a voluptate impedit sed, architecto reprehenderit pariatur expedita nostrum minus distinctio quae labore ad sint error aliquam harum exercitationem magnam cupiditate odio? Nobis, vel inventore?
+                                Perferendis error nesciunt id similique laboriosam reiciendis expedita eos cumque harum exercitationem eveniet quasi vero dignissimos alias sed quae magni quisquam iste corporis dolorem tenetur, maiores ea officiis culpa! Numquam.
+                                Eligendi, similique voluptatum, consequuntur earum dignissimos, obcaecati sit laudantium officiis neque blanditiis optio. Eaque ipsum earum iusto laborum, iure ratione veniam neque adipisci assumenda id voluptate dolorum vel quasi itaque.
+                                Ut error maiores cumque recusandae earum nemo voluptas inventore eveniet itaque alias voluptatem, dicta sequi assumenda dolor aspernatur, obcaecati odit rem eos quibusdam eum dolore tempora omnis iure. Maiores, fugiat?
+                                Accusamus earum reprehenderit natus corporis quis quisquam laudantium quae magnam quam temporibus doloribus rerum cum voluptatum quaerat minus, exercitationem dolore quas? Temporibus modi voluptas quos rerum quod illo placeat at.
+                                Eveniet praesentium animi officiis obcaecati aliquam a nisi dicta assumenda distinctio. Illum, id quam voluptates sunt aut earum sit consequatur, reiciendis corporis neque velit magni tempora natus, vitae odit beatae?
+                                Quos veniam tenetur veritatis aspernatur quidem maxime fugit laboriosam ab amet facilis, unde possimus dolore deleniti qui inventore enim. Soluta eaque nesciunt culpa deleniti ab reiciendis. Cumque eaque expedita magnam.
+                                Assumenda, asperiores! Esse id ex sapiente maiores, facere quisquam unde in possimus modi consequatur ab magni, nihil a. Nam distinctio doloremque tenetur repudiandae officiis, dolore cupiditate. Porro corrupti minima placeat?
+                            </div>
+                            <p><span>개인정보수집 및 이용에 동의하십니까?</span> <input type="checkbox" value="ok" name="privacy" id="privacy"> <label for="privacy">동의함</label></p>
+                        </div>
+                    </fieldset>
+                    <div class="btn">
+                        <button type="submit">전송</button>  <!--form action으로 보내야 하기 때문에 type은 무조건 submit이어야 함-->
+                        <button type="reset">취소</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="row">
+                <div class="sns">
+                    <a href="#none"><i class="fab fa-twitter"></i><span class="blind">트위터</span></a>
+                    <a href="#none"><i class="fab fa-facebook-square"></i><span class="blind">페이스북</span></a>
+                    <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>
+                </div>
+                <div class="info">
+                    <address>
+                        <span>상호 : DESIGN COCO</span>
+                        <span>주소 : 대구광역시 수성구 방이동</span>
+                        <span>TEL : 010-6838-1744</span>
+                        <span>사업자등록번호 : 511-53-00340</span>
+                    </address>
+                    <p>Copyright(c) DESING COCO. All Rights Reserved.</p>
+                </div>
+
+                <div class="privacy">
+                    <a href="#none">회사소개</a>
+                    <a href="#none">개인정보처리방침</a>
+                    <span class="fam">패밀리사이트
+                        <ul>
+                            <li><a href="#none">패밀리1</a></li>
+                            <li><a href="#none">패밀리2</a></li>
+                            <li><a href="#none">패밀리3</a></li>
+                            <li><a href="#none">패밀리4</a></li>
+                        </ul>
+                    </span>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    
+    <div id="commFooter"></div>
+    
+    
+    <script src="./js/common.js"></script>
+    <script src="./js/join.js"></script>
+</body>
+
+</html>

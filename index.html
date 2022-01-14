@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- 슬릭슬라이더 플러그인 꽂을 때는 내가 만든 css 파일보단 위에 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/rwdcommon.css"> <!--기본스타일 파일보다 반응형파일이 아래에-->
+    <!-- 작은화면이 아래 있어야 하니까 common(pc화면),index보단 아래에 두거나 개발 다 하고 common.css에 복사하기 -->
+    <title>디자인코코 업데이트 시작</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- js 슬릭슬라이더 플러그인 꽂을때는 내가 만든 js 파일보다 위에 -->
+</head>
+<body>
+
+
+    <div id="wrap">
+        <header id="header">
+            <div class="top_menu">
+                <div class="row">
+                    <div class="search">
+                        <span class="blind">검색어를 입력하세요</span>
+                        <input type="text" id="sbox" placeholder="검색어 입력">
+                        <label for="sbox"><i class="fas fa-search"></i></label>
+                    </div>
+                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    <a href="#none"><i class="fas fa-lock"></i> 로그인</a>
+                    <a href="join.html"><i class="fas fa-sign-in-alt"></i> 회원가입</a>
+                </div><!--a태그들은 원래 한줄정렬-->
+            </div>
+            <div class="row">
+                <h1><a href="index.html"><img src="img/logo.png" alt="디자인코코"></a></h1>
+               
+                <div class="opennav">
+                    <span class="blind">네비게이션 열고닫기</span>
+                    <i class="fas fa-bars"></i> <!-- 닫기 아이콘은 bars 대신 times-->
+                </div>
+
+
+                <nav id="nav">
+                    <ul class="depth1 cf">
+                        <li>
+                            <a href="company.html">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="company.html">회사소개</a></li>
+                                <li><a href="#none">CEO 인사말</a></li>
+                                <li><a href="#none">회사연혁</a></li>
+                                <li><a href="#none">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">사업소개</a>
+                            <ul class="depth2">
+                                <li><a href="#none">사업분야</a></li>
+                                <li><a href="#none">사업분야2</a></li>
+                                <li><a href="#none">인증서</a></li>
+                                <li><a href="#none">파트너</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">제품소개</a>
+                            <ul class="depth2">
+                                <li><a href="#none">제품 01</a></li>
+                                <li><a href="#none">제품 02</a></li>
+                                <li><a href="#none">제품 03</a></li>
+                                <li><a href="#none">제품 04</a></li>
+                                <li><a href="#none">제품 05</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">고객센터</a>
+                            <ul class="depth2">
+                                <li><a href="#none">고객상담</a></li>
+                                <li><a href="#none">문의게시판</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">커뮤니티</a>
+                            <ul class="depth2">
+                                <li><a href="#none">FAQ</a></li>
+                                <li><a href="#none">이벤트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <section id="section">
+            <article class="article1">
+                <!-- <div class="prev arrbtn"><i class="fas fa-chevron-left"></i></div> -->
+                <div class="slide-group">
+                    <div class="slide slide1">
+                        <div class="slide_text">
+                            <h2>WE ARE CREATIVE</h2>
+                            <p>당신과 함께하는 좋은 파트너가 되고 싶습니다.<br>
+                                최고의 전문성과 신뢰를 바탕으로 함께 성장해 나가겠습니다. </p>
+                            <a href="#none">바로가기</a>
+                        </div>
+                    </div>
+                    <div class="slide slide2">
+                        <div class="slide_text">
+                            <h2>자연에 가치를 더하다</h2>
+                            <p>당신과 함께하는 좋은 파트너가 되고 싶습니다.<br>
+                                최고의 전문성과 신뢰를 바탕으로 함께 성장해 나가겠습니다. </p>
+                            <a href="#none">바로가기</a>
+                        </div>
+                    </div>
+                    <div class="slide slide3">
+                        <div class="slide_text">
+                            <h2>기술과 경험의 융합, 미래를 위한 변화</h2>
+                            <p>당신과 함께하는 좋은 파트너가 되고 싶습니다.<br>
+                                최고의 전문성과 신뢰를 바탕으로 함께 성장해 나가겠습니다. </p>
+                            <a href="#none">바로가기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="plpa"><i class="fas fa-pause"></i></div>
+                <!-- <div class="next arrbtn"><i class="fas fa-chevron-right"></i></div>
+                <ul class="slickdots">
+                    <li class="active"><button>1</button></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                </ul> -->
+            </article>
+            <article class="article2 row">
+                    <h2>What We Do</h2>
+                    <p>주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화를 창달에 노력하고 있습니다.</p>
+                    <ul class="cf">
+                        <li>
+                            <div>
+                                <h3>회사소개</h3>
+                                <p>주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화를 창달에 노력하고 있습니다.</p>
+                                <a href="#none">DETAIL VIEW</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>사업분야</h3>
+                                <p>주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화를 창달에 노력하고 있습니다.</p>
+                                <a href="#none">DETAIL VIEW</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>네트워크</h3>
+                                <p>주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화를 창달에 노력하고 있습니다.</p>
+                                <a href="#none">DETAIL VIEW</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>사회공헌</h3>
+                                <p>주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화를 창달에 노력하고 있습니다.</p>
+                                <a href="#none">DETAIL VIEW</a>
+                            </div>
+                        </li>
+                    </ul>
+            </article>
+            <article class="article3">
+                <div class="row">
+                    <h2>자연에서 온 재료와 친환경을 향한 혁신</h2>
+                    <p>사람에게 시각적인 안정을 제공하는 것 등의 실천을 통해 모두가 편안히 호흡하여 쉴 수 있는 공간을 제공하려 합니다.</p>
+                    <a href="#none">자세히보기 >></a>
+                </div>
+            </article>
+            <article class="article4 row">
+                    <h2>Product</h2>
+                    <p>최고의 prestige와 공간가치를 창조하는 global partner, 건축물과 주변환경을 생각하는 개발 소비자의 품격있는 삶을 위한 주거문화 창달에 노력하고
+                        있습니다. </p>
+                    <ul class="cf">
+                        <li>
+                            <div>
+                                <img src="img/2014214025_p01.jpg" alt="">
+                                <div class="zoom">
+
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품08</h4>
+                            <p>고객과의 약속을 최우선으로 생각한다.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/318183899_p02.jpg" alt="">
+                                <div class="zoom">
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품07</h4>
+                            <p>고객과의 약속을 최우선으로 생각하고, 양질의 서비스를 제공하고자 힘쓰며 경쟁력 있는 기업으로 도약하고 러알 ㅇ우리안 러ㅏㅇ라알 아랑라라아라 랑라ㅏ라라</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/348716429_p03.jpg" alt="">
+                                <div class="zoom">
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품06</h4>
+                            <p>고객과의 약속을 최우선으로 생각하고, 양질의 서비스를 제공하고자 힘쓰며 경쟁력 있는 기업으로 도약하고이링 랑라ㅏ리ㅑㅍ 다라어라 다랄 아랑러아라라라 아랑 라아랑 키차아리 다랑 라알라</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/1264802078_p04.jpg" alt="">
+                                <div class="zoom">
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품05</h4>
+                            <p>고객과의 약속을 최우선으로 생각하고, 양질의 서비스를 제공하고자 힘쓰며 경쟁력 있는 기업으로 도약하고 아리니ㅑ라가닏 랑린 라니 가나다라 가다날 아라아</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/193592240_p05.jpg" alt="">
+                                <div class="zoom">
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품04</h4>
+                            <p>고객과의 약속을 최우선으로 생각하고, 양질의 서비스를 제공하고자 힘쓰며 경쟁력 있는 기업으로 도약하고 힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/56180477_p06.jpg" alt="">
+                                <div class="zoom">
+                                    <a href="http://www.naver.com"><i class="fas fa-search"></i></a>
+                                    <a href="./img/a.pdf" download><i class="fas fa-download"></i></a>
+                                </div>
+                            </div>
+                            <h4>제품03</h4>
+                            <p>고객과의 약속을 최우선으로 생각하고, 양질의 서비스를 제공하고자 힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고  힘쓰며 경쟁력 있는 기업으로 도약하고</p>
+                        </li>
+                    </ul>
+            </article>
+            <article class="article5">
+                <div class="row">
+                    <div class="cs_board">
+                        <ul class="tabmenu">
+                            <li class="active">공지사항</li>
+                            <li>뉴스&amp;이벤트</li>
+                        </ul>
+                        <div class="contents">
+                            <div class="active">
+                                <table>
+                                    <caption class="blind">공지사항</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다. 공지사항 테스트글입니다. 공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#none" class="more">더보기1</a>
+                            </div>
+                            <div>
+                                <table>
+                                    <caption class="blind">뉴스이벤트</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>뉴스이벤트 테스트글입니다. 공지사항 테스트글입니다. 공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공지사항 테스트글입니다.</td>
+                                            <td>2021-01-05</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#none" class="more">더보기2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs_center">
+                        <h4>고객센터</h4>
+                        <div class="cs-box">
+                            <ul>
+                               <li class="tel_num"><i class="fas fa-phone"></i> <a href="tel:010-6838-1744">010-6838-1744</a></li> <!--진짜 전화걸 수 있는 방법 "tel:번호"-->
+                               <li>상담시간 : 09:00-18:00</li>
+                               <li>점심시간 : 12:00-13:00 (주말, 공휴일 휴무)</li>
+                               <li class="cs-btn"><a href="#none" class="cs-btn">1:1문의하기</a> <a href="#none" target="_blank" class="cs-btn2">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cs_movie">
+                        <div class="tubewrap">
+                            <!-- 컨트롤러(controls=1), 음소거(mute=1), 자동재생(autoplay=1), 추천영상끄기(rel=0) 공유 - 퍼가기 하고 width:100%로 변경 , ?controls=0 = 동영상 재생버튼 안보임, 호버하면 나타남, 0&amp;mute=1&amp;autoplay=1 = 자동재생, &amp;rel=0 = 추천영상 X-->
+                            <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h7C3RyiZfYs?controls=0&amp;mute=1&amp;autoplay=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <img src="./img/20210223_090434.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <div class="row">
+                <div class="sns">
+                    <a href="#none"><i class="fab fa-twitter"></i><span class="blind">트위터</span></a>
+                    <a href="#none"><i class="fab fa-facebook-square"></i><span class="blind">페이스북</span></a>
+                    <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>
+                </div>
+                <div class="info">
+                    <address>
+                        <span>상호 : DESIGN COCO</span>
+                        <span>주소 : 대구광역시 수성구 방이동</span>
+                        <span>TEL : 010-6838-1744</span>
+                        <span>사업자등록번호 : 511-53-00340</span>
+                    </address>
+                    <p>Copyright(c) DESING COCO. All Rights Reserved.</p>
+                </div>
+
+                <div class="privacy">
+                    <a href="#none">회사소개</a>
+                    <a href="#none">개인정보처리방침</a>
+                    <span class="fam">패밀리사이트
+                        <ul>
+                            <li><a href="#none" target="_blank">패밀리1</a></li>
+                            <li><a href="#none" target="_blank">패밀리2</a></li>
+                            <li><a href="#none" target="_blank">패밀리3</a></li>
+                            <li><a href="#none" target="_blank">패밀리4</a></li>
+                            <!-- target="_blank" 새로운 창에서 열리도록 -->
+                        </ul>
+                    </span>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    
+    <!-- <div class="outbox">
+        <div class="inbox">
+            <a href="#" target="_blank"><img src="" alt="설명문구"></a>
+            <button type="button">닫기</button>
+        </div>
+    </div> -->
+
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
